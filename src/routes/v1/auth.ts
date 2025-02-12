@@ -1,26 +1,28 @@
 import { Request, Response, Router } from 'express';
+import bcrypt from 'bcrypt';
 
 const AuthRouter = Router();
+let password: string;
 
-AuthRouter.post('/register', (request: Request, response: Response) => {
+AuthRouter.post('/register', async (request: Request, response: Response) => {
 	try {
-		console.log('working');
+		password = await bcrypt.hash(request.body.password, 10);
 		response.json({
-			status: 'OK',
+			password,
 		});
 	} catch (e) {
 		console.log('Something went wrong');
 	}
 });
 
-AuthRouter.post('/login', (request: Request, response: Response) => {
+AuthRouter.post('/login', async (request: Request, response: Response) => {
 	try {
-		console.log('working');
 		response.json({
-			status: 'OK',
+			status: await bcrypt.compare(request.body.password, password),
 		});
 	} catch (e) {
 		console.log('Something went wrong');
+		response.send('shitteroo');
 	}
 });
 
