@@ -4,7 +4,7 @@ import cors from 'cors';
 import 'dotenv/config';
 import morgan from 'morgan';
 
-import BaseRoute from './routes/v1';
+import { v1BaseRouter } from './routes/index';
 
 (() => {
 	const app = express();
@@ -13,7 +13,7 @@ import BaseRoute from './routes/v1';
 	app.use(morgan('tiny'));
 	app.use(express.json());
 
-	app.use('/v1', BaseRoute);
+	app.use('/v1', v1BaseRouter);
 
 	app.listen(process.env.PORT, () => {
 		console.log(`listening on port ${process.env.PORT}`);
