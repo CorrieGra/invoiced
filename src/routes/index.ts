@@ -1,3 +1,2 @@
-import AuthRouter from './auth';
-
-export { AuthRouter };
+import v1BaseRouter from './v1';
+export { v1BaseRouter };

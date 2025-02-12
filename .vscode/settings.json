@@ -23,5 +23,6 @@
     "editor.linkedEditing": true,
     "workbench.colorCustomizations": {
         "editorUnnecessaryCode.border": "#dd7aab"
-    }
+    },
+    "explorer.compactFolders": false
 }
