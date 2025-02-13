@@ -1,7 +1,8 @@
+import 'dotenv/config';
 import 'module-alias/register';
+import './config/env.validator';
 import express from 'express';
 import cors from 'cors';
-import 'dotenv/config';
 import morgan from 'morgan';
 
 import { v1BaseRouter } from './routes/index';
