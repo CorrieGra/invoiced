@@ -3,13 +3,10 @@ import jwt from 'jsonwebtoken';
 
 let passwordHash: string;
 
-interface IAuthService {
-	register: (payload: RegistrationRequest) => Promise<AuthorisedUser>;
-	login: (payload: LoginRequest) => Promise<AuthorisedUser>;
-}
-
-const AuthService: IAuthService = {
-	register: async (payload: RegistrationRequest): Promise<AuthorisedUser> => {
+export const AuthService: IAuthService = {
+	register: async (
+		payload: RegistrationRequest,
+	): Promise<AuthorisedResponse> => {
 		// HAS PASSWORD
 		const hash = await bcrypt.hash(payload.password, 10);
 		// TODO: REMOVE ONCE DB IS CONNECTED
@@ -31,7 +28,7 @@ const AuthService: IAuthService = {
 			_t: token,
 		};
 	},
-	login: async (payload: LoginRequest): Promise<AuthorisedUser> => {
+	login: async (payload: LoginRequest): Promise<AuthorisedResponse> => {
 		// VALIDATE PASSWORD
 		// TODO: RETRIEVE PASSWORD & USERNAME FROM DB ONCE CONNECTED FOR USER EMAIL
 		const isAuthorised = await bcrypt.compare(
@@ -58,5 +55,3 @@ const AuthService: IAuthService = {
 		};
 	},
 };
-
-export default AuthService;

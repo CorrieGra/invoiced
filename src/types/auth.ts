@@ -9,7 +9,7 @@ interface LoginRequest {
 	password: string;
 }
 
-interface AuthorisedUser {
+interface AuthorisedResponse {
 	email: string;
 	username: string;
 	_t?: string;
