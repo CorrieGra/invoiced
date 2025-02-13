@@ -30,7 +30,7 @@ AuthRouter.post('/login', async (request: Request, response: Response) => {
 		delete authorisedResponse._t;
 
 		response
-			.status(201)
+			.status(200)
 			.setHeader('x-invoiced-token', _t)
 			.json(authorisedResponse);
 	} catch (e) {

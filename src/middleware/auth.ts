@@ -1,13 +1,8 @@
-import { NextFunction, Request, Response } from 'express';
-import { ErrorMessages } from '../constants';
+import { NextFunction, Response } from 'express';
 import jwt from 'jsonwebtoken';
-import { IncomingHttpHeaders } from 'http';
 
-interface RequestWithCustomHeaders extends Request {
-	headers: IncomingHttpHeaders & {
-		'x-invoiced-token': string;
-	};
-}
+import { ErrorMessages } from '../constants';
+import RequestWithCustomHeaders from '../types/base';
 
 export const Authorise = (
 	request: RequestWithCustomHeaders,
