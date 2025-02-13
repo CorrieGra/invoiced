@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  api:
+    container_name: invoiced
+    build: .
+    ports:
+      - "9090:9090"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on: 
+      - db
+    restart: always
+  db:
+    container_name: invoiced_db
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+
+volumes:
+  postgres_data:
+    driver: local
