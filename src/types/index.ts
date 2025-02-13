@@ -1,2 +1,1 @@
-import { RequestWithCustomHeaders } from './base';
-export { RequestWithCustomHeaders };
+import { default as RequestWithCustomHeaders } from './base';

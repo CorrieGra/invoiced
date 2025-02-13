@@ -2,11 +2,11 @@ declare namespace NodeJS {
 	interface ProcessEnv {
 		NODE_ENV: 'development' | 'staging' | 'production';
 		PORT: number;
-		DB_HOST: string;
-		DB_PORT: number;
-		DB_USER: string;
-		DB_PASSWORD: string;
-		DB_NAME: string;
+		POSTGRES_HOST: string;
+		POSTGRES_PORT: number;
+		POSTGRES_USER: string;
+		POSTGRES_PASSWORD: string;
+		POSTGRES_DATABASE: string;
 		JWT_SECRET: string;
 	}
 }
