@@ -8,10 +8,6 @@ interface ClientCompanyDetails {
 	name: string;
 	address: string;
 	companyContact: ClientContactDetails;
-	componayPersonContact: ClientContactDetails & {
-		firstName: string;
-		lastName: string;
-	};
 }
 
 interface ClientCompany {
@@ -20,5 +16,4 @@ interface ClientCompany {
 	createdAt: Date;
 	updatedAt: Date | null;
 	isActive: boolean;
-	hasAccessRevoked: boolean;
 }

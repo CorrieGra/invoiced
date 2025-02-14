@@ -4,7 +4,7 @@ const envSchema = z.object({
 	PORT: z.string(),
 	POSTGRES_PORT: z.string(),
 	POSTGRES_HOST: z.string(),
-	POSTGRES_DATABASE: z.string(),
+	POSTGRES_DB: z.string(),
 	POSTGRES_USER: z.string(),
 	POSTGRES_PASSWORD: z.string(),
 	JWT_SECRET: z.string(),

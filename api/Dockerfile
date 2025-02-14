@@ -5,6 +5,7 @@ WORKDIR /app
 COPY . .
 
 RUN yarn install --ignore-scripts
+
 RUN yarn remove bcrypt @types/bcrypt
 RUN yarn add bcrypt
 RUN yarn add -D @types/bcrypt
@@ -13,4 +14,4 @@ RUN yarn build
 
 EXPOSE 9090
 
-CMD ["node", "./dist/server.js"]
+CMD ["node", "dist/server.js"]

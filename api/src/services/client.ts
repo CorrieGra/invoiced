@@ -6,13 +6,11 @@ export const ClientService: IClientService = {
 				name: payload.name,
 				address: payload.address,
 				companyContact: payload.companyContact,
-				componayPersonContact: payload.componayPersonContact,
 			},
 			projects: [],
 			createdAt: new Date(),
 			updatedAt: null,
 			isActive: true,
-			hasAccessRevoked: false,
 		};
 
 		return response;
@@ -24,13 +22,11 @@ export const ClientService: IClientService = {
 				name: payload.name,
 				address: payload.address,
 				companyContact: payload.companyContact,
-				componayPersonContact: payload.componayPersonContact,
 			},
 			projects: [],
 			createdAt: new Date(),
 			updatedAt: null,
 			isActive: true,
-			hasAccessRevoked: false,
 		};
 
 		return response;
