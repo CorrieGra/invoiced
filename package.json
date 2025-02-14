@@ -50,10 +50,12 @@
     "zod": "^3.24.2"
   },
   "_moduleAliases": {
+    "config": "./dist/config",
     "data": "./dist/data",
-    "routes": "./dist/routes",
     "middleware": "./dist/middleware",
+    "routes": "./dist/routes",
     "services": "./dist/services",
-    "utils": "./dist/utils"
+    "utils": "./dist/utils",
+    "types": "./dist/types"
   }
 }
