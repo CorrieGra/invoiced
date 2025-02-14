@@ -1,6 +1,6 @@
-import 'dotenv/config';
 import 'module-alias/register';
-import './config/env.validator';
+import 'dotenv/config';
+import 'config/env.validator';
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';

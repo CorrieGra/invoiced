@@ -2,7 +2,7 @@ import { NextFunction, Response } from 'express';
 import jwt from 'jsonwebtoken';
 
 import { ErrorMessages } from '../constants';
-import RequestWithCustomHeaders from '../types/base';
+import RequestWithCustomHeaders from 'types/base';
 
 export const Authorise = (
 	request: RequestWithCustomHeaders,

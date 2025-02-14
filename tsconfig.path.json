@@ -2,11 +2,13 @@
     "compilerOptions": {
         "baseUrl": "./src",
         "paths": {
-        "data/*": ["data/*"],
-        "routes/*": ["routes/*"],
-        "middleware/*": ["middleware/*"],
-        "services/*/": ["services/*"],
-        "utils/*": ["utils/*"]
+            "config/*": ["data/*"],
+            "data/*": ["data/*"],
+            "middleware/*": ["middleware/*"],
+            "routes/*": ["routes/*"],
+            "services/*/": ["services/*"],
+            "utils/*": ["utils/*"],
+            "types/*": ["types/*"]
         }
     }
 }
